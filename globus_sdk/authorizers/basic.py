@@ -21,7 +21,8 @@ class BasicAuthorizer(GlobusAuthorizer):
         self.username = username
         self.password = password
 
-        encoded = base64.b64encode("%s:%s" % (username, password))
+        encoded = base64.b64encode(
+            bytes("%s:%s" % (username, password)), "utf-8")
         self.header_val = "Basic %s" % encoded
 
     def set_authorization_header(self, header_dict):
