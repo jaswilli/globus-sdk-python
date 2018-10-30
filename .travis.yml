@@ -4,6 +4,11 @@ matrix:
   include:
     - os: windows
       language: sh
+      python: "3.7"
+      before_install:
+        - choco install python3
+        - export PATH="/c/Python3y7:/c/Python37/Scripts:$PATH"
+        - python -m pip install --upgrade pip wheel
     - python: "2.7"
       dist: xenial
     - python: "3.4"
