@@ -41,6 +41,7 @@ test: $(VIRTUALENV)
 	$(VIRTUALENV)/bin/pytest -v --cov=globus_sdk
 
 travis:
+	python -m ensurepip
 	pip install -U pip setuptools
 	pip install -e '.[development]'
 	flake8
