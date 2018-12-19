@@ -21,6 +21,7 @@ from globus_sdk.exc import (
     TransferAPIError,
 )
 from globus_sdk.local_endpoint import LocalGlobusConnectPersonal
+from globus_sdk.queues import QueuesClient
 from globus_sdk.response import GlobusHTTPResponse, GlobusResponse
 from globus_sdk.search import SearchClient, SearchQuery
 from globus_sdk.transfer import TransferClient
@@ -55,6 +56,7 @@ __all__ = (
     "SearchClient",
     "SearchQuery",
     "LocalGlobusConnectPersonal",
+    "QueuesClient",
 )
 
 
